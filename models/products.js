@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
       allowNull: false,
       references: {
         model: 'categories', // Nom de la table référencée
-        key: 'id',           // Clé primaire de la table référencée
+        key: 'id',           // Clé primaire de la table référencée-
       },
     },
     name: {
