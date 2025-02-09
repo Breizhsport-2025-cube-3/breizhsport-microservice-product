@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - dev
   pull_request:
     branches:
       - main
+      - dev
 
 jobs:
   build-product-service:
@@ -28,6 +30,7 @@ jobs:
 
   publish-on-docker:
     needs: [build-product-service]
+    if: github.ref == 'refs/heads/main'
     uses: Breizhsport-2025-cube-3/breizhsport-infra/.github/workflows/publish_on_docker.yml@main
     secrets:
       tags: ${{ secrets.DOCKER_USERNAME }}/breizhsport-product:develop
