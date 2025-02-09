@@ -9,7 +9,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
         max: 10, // Nombre maximum de connexions dans le pool
         min: 0,  // Nombre minimum de connexions dans le pool
         acquire: 30000, // Temps maximum (en ms) pour acquérir une connexion
-        idle: 10000, // Temps maximum (en ms) pendant lequel une connexion peut être inactive
+        idle: 10000, // Temps maximum (en ms) pendant lequel une connexion peut être inactive.
     },
 });
 
